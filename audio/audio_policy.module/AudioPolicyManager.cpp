@@ -25,7 +25,7 @@ namespace android_audio_legacy {
 
 
 // ----------------------------------------------------------------------------
-// AudioPolicyManager for targa platform (based on jordan)
+// AudioPolicyManager for spyder platform (based on jordan)
 // Common audio policy manager code is implemented in AudioPolicyManagerBase class
 // ----------------------------------------------------------------------------
 

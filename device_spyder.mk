@@ -19,14 +19,14 @@ PRODUCT_PACKAGES := \
     charger_res_images
 
 # Audio sucks currently.  Moto customized alsa_sound and while I'm working it out, I'll use phone libs.  blech.
-PRODUCT_COPY_FILES += \
-    device/motorola/spyder/audio/acoustics.default.so:/system/lib/hw/acoustics.spyder.so \
-    device/motorola/spyder/audio/alsa.omap4.so:/system/lib/hw/alsa.spyder.so \
-    device/motorola/spyder/audio/libasound.so:/system/lib/libasound.so \
-    device/motorola/spyder/audio/libaudio.so:/system/lib/libaudio.so \
-    device/motorola/spyder/audio/libaudio_ext.so:/system/lib/libaudio_ext.so \
-    device/motorola/spyder/audio/libaudiopolicy.so:/system/lib/libaudiopolicy.so \
-    device/motorola/spyder/audio/liba2dp.so:/system/lib/liba2dp.so 
+#PRODUCT_COPY_FILES += \
+#    device/motorola/spyder/audio/acoustics.default.so:/system/lib/hw/acoustics.spyder.so \
+#    device/motorola/spyder/audio/alsa.omap4.so:/system/lib/hw/alsa.spyder.so \
+#    device/motorola/spyder/audio/libasound.so:/system/lib/libasound.so \
+#    device/motorola/spyder/audio/libaudio.so:/system/lib/libaudio.so \
+#    device/motorola/spyder/audio/libaudio_ext.so:/system/lib/libaudio_ext.so \
+#    device/motorola/spyder/audio/libaudiopolicy.so:/system/lib/libaudiopolicy.so \
+#    device/motorola/spyder/audio/liba2dp.so:/system/lib/liba2dp.so 
 
 # Hardware HALs
 PRODUCT_COPY_FILES += \
@@ -96,9 +96,9 @@ PRODUCT_PACKAGES += \
     FmTxApp \
     FmService 
 
+#    spyder_releaseutils-check_kernel \
 # Release utilities
 PRODUCT_PACKAGES += \
-    spyder_releaseutils-check_kernel \
     spyder_releaseutils-finalize_release \
     spyder_releaseutils-mke2fs \
     spyder_releaseutils-tune2fs
@@ -230,19 +230,19 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
 # stuff specific to ti OMAP4 hardware
-$(call inherit-product, hardware/ti/omap4xxx/omap4.mk)
-$(call inherit-product, hardware/ti/wpan/ti-wpan-products.mk)
+#$(call inherit-product, hardware/ti/omap4xxx/omap4.mk)
+#$(call inherit-product, hardware/ti/wpan/ti-wpan-products.mk)
 #$(call inherit-product, hardware/ti/wpan/tools/FM/Android.mk)
 
-$(call inherit-product-if-exists, vendor/google/google-vendor.mk)
+#$(call inherit-product-if-exists, vendor/google/google-vendor.mk)
 
 $(call inherit-product-if-exists, vendor/motorola/spyder/spyder-vendor.mk)
 
 
 # stuff common to all Motorola phones -- disabled for Sandbox
-$(call inherit-product, device/motorola/common/common_hijack.mk)
+#$(call inherit-product, device/motorola/common/common_hijack.mk)
 
-$(call inherit-product, build/target/product/full_base_telephony.mk)
+$(call inherit-product, build/target/product/full_base.mk)
 
 PRODUCT_NAME := full_spyder
 PRODUCT_DEVICE := spyder
