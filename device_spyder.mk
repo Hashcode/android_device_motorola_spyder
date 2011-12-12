@@ -125,9 +125,27 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FileManager \
     AndroidTerm \
-    DSPManager \
-    LatinImeDictionaryPack
-
+    UserDictionaryProvider \
+    LatinIME \
+    Superuser \
+    Superuser.apk \
+    su
+    
+# Optional packages
+PRODUCT_PACKAGES += \
+    VideoEditor \
+    VoiceDialer \
+    Basic \
+    HoloSpiralWallpaper \
+    MagicSmokeWallpapers \
+    NoiseField \
+    Galaxy4 \
+    LiveWallpapers \
+    LiveWallpapersPicker \
+    VisualizationWallpapers \
+    PhaseBeam \
+    librs_jni
+    
 # Rootfs files
 PRODUCT_COPY_FILES += \
     out/target/product/spyder/root/init:system/etc/rootfs/init \
@@ -203,9 +221,6 @@ PRODUCT_COPY_FILES += \
     device/motorola/spyder/prebuilt/imgtec/libsrv_um.so:system/lib/libsrv_um.so \
     device/motorola/spyder/prebuilt/imgtec/libusc.so:system/lib/libusc.so \
     device/motorola/spyder/prebuilt/imgtec/libdrm.so:system/lib/libdrm.so \
-
-#FRAMEWORKS_BASE_SUBDIRS += \
-#    $(addsuffix /java, omapmmlib)
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise

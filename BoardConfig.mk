@@ -43,7 +43,7 @@ BOARD_HOSTAPD_DRIVER        := CUSTOM
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := libCustomWifi
 WPA_SUPPLICANT_VERSION      := VER_0_6_X
 HOSTAPD_VERSION             := VER_0_6_X
-BOARD_SOFTAP_DEVICE         := wl1283
+# Fix me BOARD_SOFTAP_DEVICE         := wl1283
 BOARD_WLAN_DEVICE           := wl1283
 #BOARD_WLAN_TI_STA_DK_ROOT   := system/wlan/ti/wilink_6_1
 WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/tiwlan_drv.ko"
@@ -138,7 +138,7 @@ BOARD_HAS_MAPPHONE_SWITCH := true
 
 
 # OTA Packaging
-TARGET_CUSTOM_RELEASETOOL := ./vendor/cm/tools/squisher
+TARGET_CUSTOM_RELEASETOOL := ./device/motorola/targa/releasetools/squisher
 TARGET_PROVIDES_RELEASETOOLS := true
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/motorola/spyder/releasetools/spyder_ota_from_target_files
 TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := device/motorola/spyder/releasetools/spyder_img_from_target_files
