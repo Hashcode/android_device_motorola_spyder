@@ -18,7 +18,7 @@ fi
 set -e
 QUIET=1
 BASE=`pwd`
-#BRUTECRUSH="-brute"
+BRUTECRUSH="-brute"
 TMPDIR=/tmp/opticharge-$$
 
 #if [ -z "$BRUTE_PNGCRUSH" ]
