@@ -113,7 +113,7 @@ rm -rf $REPACK/ota/recovery
 # Determine what to name the new signed package
 REALDATE=`date +%F`
 
-OUTFILE=$OUT/$TARGET_PRODUCT-AOSP$BUILDID-$REALDATE.zip
+OUTFILE=$OUT/ICS-4.0.1_r1.2-$TARGET_PRODUCT-$REALDATE.zip
 
 # Pack it up and sign
 printf "Zipping package..."
