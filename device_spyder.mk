@@ -120,7 +120,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     librs_jni \
-    com.android.future.usb.accessory
+    com.android.future.usb.accessory \
+    libjni_pinyinime \
 
 PRODUCT_PACKAGES += \
     FileManager \
@@ -143,9 +144,9 @@ PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
     VisualizationWallpapers \
-    PhaseBeam \
-    librs_jni
-    
+    PhaseBeam 
+
+
 # Rootfs files
 PRODUCT_COPY_FILES += \
     out/target/product/spyder/root/init:system/etc/rootfs/init \
@@ -193,7 +194,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/spyder/prebuilt/etc/vold.fstab:system/etc/vold.fstab \
     device/motorola/spyder/prebuilt/etc/wifi/tiwlan_ap.ini:system/etc/wifi/tiwlan_ap.ini \
     device/motorola/spyder/prebuilt/etc/wifi/tiwlan.ini:system/etc/wifi/tiwlan.ini \
-    device/motorola/spyder/prebuilt/usr/idc/qtouch-touchscreen.idc:system/usr/idc/qtouch-touchscreen.idc \
+    device/motorola/spyder/prebuilt/usr/idc/TOUCHIC-touchscreen.idc:system/usr/idc/TOUCHIC-touchscreen.idc \
     device/motorola/spyder/prebuilt/usr/keychars/omap-keypad.kcm:system/usr/keychars/omap-keypad.kcm \
     device/motorola/spyder/prebuilt/usr/keylayout/aev_abs.kl:system/usr/keylayout/aev_abs.kl \
     device/motorola/spyder/prebuilt/usr/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \

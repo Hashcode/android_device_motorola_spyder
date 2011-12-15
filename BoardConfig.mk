@@ -138,7 +138,7 @@ BOARD_HAS_MAPPHONE_SWITCH := true
 
 
 # OTA Packaging
-TARGET_CUSTOM_RELEASETOOL := ./device/motorola/targa/releasetools/squisher
+TARGET_CUSTOM_RELEASETOOL := ./device/motorola/spyder/releasetools/squisher
 TARGET_PROVIDES_RELEASETOOLS := true
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/motorola/spyder/releasetools/spyder_ota_from_target_files
 TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := device/motorola/spyder/releasetools/spyder_img_from_target_files
