@@ -120,13 +120,32 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     librs_jni \
-    com.android.future.usb.accessory
+    com.android.future.usb.accessory \
+    libjni_pinyinime \
 
 PRODUCT_PACKAGES += \
     FileManager \
     AndroidTerm \
-    DSPManager \
-    LatinImeDictionaryPack
+    UserDictionaryProvider \
+    LatinIME \
+    Superuser \
+    Superuser.apk \
+    su
+    
+# Optional packages
+PRODUCT_PACKAGES += \
+    VideoEditor \
+    VoiceDialer \
+    Basic \
+    HoloSpiralWallpaper \
+    MagicSmokeWallpapers \
+    NoiseField \
+    Galaxy4 \
+    LiveWallpapers \
+    LiveWallpapersPicker \
+    VisualizationWallpapers \
+    PhaseBeam 
+
 
 # Rootfs files
 PRODUCT_COPY_FILES += \
@@ -175,7 +194,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/spyder/prebuilt/etc/vold.fstab:system/etc/vold.fstab \
     device/motorola/spyder/prebuilt/etc/wifi/tiwlan_ap.ini:system/etc/wifi/tiwlan_ap.ini \
     device/motorola/spyder/prebuilt/etc/wifi/tiwlan.ini:system/etc/wifi/tiwlan.ini \
-    device/motorola/spyder/prebuilt/usr/idc/qtouch-touchscreen.idc:system/usr/idc/qtouch-touchscreen.idc \
+    device/motorola/spyder/prebuilt/usr/idc/TOUCHIC-touchscreen.idc:system/usr/idc/TOUCHIC-touchscreen.idc \
     device/motorola/spyder/prebuilt/usr/keychars/omap-keypad.kcm:system/usr/keychars/omap-keypad.kcm \
     device/motorola/spyder/prebuilt/usr/keylayout/aev_abs.kl:system/usr/keylayout/aev_abs.kl \
     device/motorola/spyder/prebuilt/usr/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
@@ -203,9 +222,6 @@ PRODUCT_COPY_FILES += \
     device/motorola/spyder/prebuilt/imgtec/libsrv_um.so:system/lib/libsrv_um.so \
     device/motorola/spyder/prebuilt/imgtec/libusc.so:system/lib/libusc.so \
     device/motorola/spyder/prebuilt/imgtec/libdrm.so:system/lib/libdrm.so \
-
-#FRAMEWORKS_BASE_SUBDIRS += \
-#    $(addsuffix /java, omapmmlib)
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
@@ -235,6 +251,7 @@ $(call inherit-product, hardware/ti/wpan/ti-wpan-products.mk)
 #$(call inherit-product, hardware/ti/wpan/tools/FM/Android.mk)
 
 $(call inherit-product-if-exists, vendor/google/google-vendor.mk)
+$(call inherit-product-if-exists, vendor/verizon/verizon-vendor.mk)
 
 $(call inherit-product-if-exists, vendor/motorola/spyder/spyder-vendor.mk)
 
