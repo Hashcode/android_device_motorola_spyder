@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModemConfigFile NumberOfModemEntries="1">
+    <ModemConfigInfo Id="0" name="Qcom" NumberOfRadioModuleEntries="2" PreferredNetworkModeKeyName="preferred_network_mode" IccCardSlotNum="1">
+        <RadioModule Id="0" name="CDMA" PhoneType="2" Active="optional" />
+        <RadioModule Id="1" name="GSM" PhoneType="1" Active="optional" />
+    </ModemConfigInfo>
+</ModemConfigFile>
